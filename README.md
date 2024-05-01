@@ -9,4 +9,7 @@
 
 ## Quickstart 
 
-run `yarn:dev`
+### To run both frontend and backend in docker 
+```bash
+yarn:dev 
+```
