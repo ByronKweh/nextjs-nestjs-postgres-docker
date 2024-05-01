@@ -1,0 +1,12 @@
+{
+  "name": "docker-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ByronKweh/nextjs-nestjs-postgres-docker.git",
+  "author": "ByronKweh <byronkweh@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "backend:dev":"cd ./backend && yarn start:dev",
+    "frontend:dev":"cd ./frontend && yarn start:dev"
+  }
+}
