@@ -23,13 +23,13 @@ import { Button } from "./ui/button";
 
 export function Header() {
   return (
-    <header className="flex items-center justify-between h-16 px-4 bg-white shadow-sm dark:bg-gray-900 dark:text-white">
+    <header className="flex items-center justify-between h-16 px-4 bg-white shadow-sm dark:bg-gray-900 dark:text-white sticky top-0">
       <Link className="flex items-center gap-2" href="#">
         <MountainIcon className="w-6 h-6" />
         <span className="text-lg font-bold">DockerLife</span>
       </Link>
-      <nav className="hidden md:flex items-center gap-6 pr-10">
-        <Link className="text-sm font-medium hover:underline" href="#">
+      <nav className="hidden md:flex  items-center gap-6 pr-10">
+        <Link className="text-sm font-medium hover:underline" href="/">
           Home
         </Link>
         <Link className="text-sm font-medium hover:underline" href="#">
@@ -38,8 +38,8 @@ export function Header() {
         <Link className="text-sm font-medium hover:underline" href="#">
           Services
         </Link>
-        <Link className="text-sm font-medium hover:underline" href="#">
-          Contact
+        <Link className="text-sm font-medium hover:underline" href="/login">
+          Login
         </Link>
       </nav>
       <Sheet>
