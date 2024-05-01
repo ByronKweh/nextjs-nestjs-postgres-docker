@@ -6,7 +6,11 @@
   "author": "ByronKweh <byronkweh@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "backend:dev":"cd ./backend && yarn start:dev",
-    "frontend:dev":"cd ./frontend && yarn start:dev"
+    "backend:dev": "cd ./backend && yarn start:dev",
+    "frontend:dev": "cd ./frontend && yarn dev",
+    "dev": "docker compose up"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
   }
 }

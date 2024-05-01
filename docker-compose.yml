@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"  # Assuming NestJS runs on port 3000
+    volumes:
+      - ./backend:/app/backend
+    depends_on:
+      - database
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3001:3001"  # Assuming Next.js runs on port 3001
+    volumes:
+      - ./frontend:/app/frontend
+    depends_on:
+      - backend
+
+  database:
+    image: postgres
+    environment:
+      POSTGRES_USER: local_username
+      POSTGRES_PASSWORD: local_password
+      POSTGRES_DB: local_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:
